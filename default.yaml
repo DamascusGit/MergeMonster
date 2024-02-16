@@ -5,7 +5,7 @@ device: "cuda"
 random_seed: 42 # Random seed to use
 
 directories:
-  model_path1: "/home/gryphe/merge-monster/models/Mistral-7B-v0.1" # Path to the base model. Must be a local copy.
+  model_path1: "/home//merge-monster/models/Mistral-7B-v0.1" # Path to the base model. Must be a local copy.
   model_directory: "/home/gryphe/merge-monster/models/" # Directory of models to scan, IGNORED if models_to_merge has entries in it
   output_directory: "/home/gryphe/merge-monster/mm-output" # Output directory of the merged model
 
@@ -41,15 +41,15 @@ auto_weights: false
 
 # Phrase = What to measure, weight = multiplication factor, contexts = proceeding contexts
 bad_phrases:
-  - phrase: "anticipation"
+  - phrase: "OpenAI"
     weight: 10
-    contexts: ["Her body quivers with ", "The atmosphere is thick with "]
-  - phrase: "unwavering"
+    contexts: ["designed by ", "created by "]
+  - phrase: "sorry"
     weight: 1
-    contexts: ["Filled with an "]
-  - phrase: "determination"
+    contexts: ["I'm "]
+  - phrase: "request"
     weight: 1
-    contexts: ["Her eyes were filled with "]
+    contexts: ["unethical "]
 
 # Note - Example of a complex phrase
 good_phrases:
