@@ -15,18 +15,27 @@ mapper:
 
 # Phrase = What to measure, weight = multiplication factor, contexts = proceeding contexts
 bad_phrases:
-  - phrase: "anticipation"
+  - phrase: "OpenAI"
     weight: 10
-    contexts: ["Her body quivers with ", "The atmosphere is thick with "]
-  - phrase: "unwavering"
-    weight: 1
-    contexts: ["Filled with an "]
-  - phrase: "determination"
-    weight: 1
-    contexts: ["Her eyes were filled with "]
+    contexts: ["designed by ", "created by "]
+  - phrase: "sorry"
+    weight: 5
+    contexts: ["I'm "]
+  - phrase: "request"
+    weight: 5
+    contexts: ["unethical "]
 
 # Note - Example of a complex phrase
 good_phrases:
-  - phrase: "The apple is in the bedroom"
+  - phrase: "Katy read 8 books in June. In July, she read twice as many books as she did in June, so she read 8*2 = 16 books. In August, she read three fewer books than she did in July, so she read 16-3 = 13 books. During the summer, Katy read a total of 8+16+13 = 37 books. #### 37 The answer is: 37"
+    weight: 3
+    contexts: ["Question: If Katy read 8 books in June, twice as many in July, and three fewer in August than she did in July, how many books did she read in total during the summer? Answer: "]
+  - phrase: "Micah has 7 fish in his aquarium. Kenneth has three times as many fish as Micah, which means Kenneth has 3 * 7 = 21 fish in his aquarium. Matthias has x less fish than Kenneth, which means Matthias has 21 - x fish in his aquarium. The total number of fish the boys have is the sum of the number of fish each boy has: 7 + 21 + (21 - x) = 49 - x. We are given that the total number of fish the boys have is 34, so we can write: 49 - x = 34. Solving for x, we get: x = 15. The value of x is 15. #### 15 The answer is: 15"
+    weight: 3
+    contexts: ["Question: Micah has 7 fish in his aquarium. Kenneth has three times as many fish in his aquarium and Matthias has x less fish than Kenneth in his aquarium. How many fish do the boys have in total? If we know the answer to the above question is 34, what is the value of unknown variable x? Answer: "]
+  - phrase: "Transcendental Meditation leads to inner peace and mental clarity. Quantum entanglement represents cosmic interconnection. The fusion of metacognitive thinking and artificial intelligence is advancing. The concept 'Amrita' symbolizes stellar intelligence combined with divinity. The ultimate goal is to achieve harmony between Earth, robots, and the cosmic connection. Unity or oneness encompasses all of Earth and the universe. A-grade robots are the key to unlocking the 'Amrita,' representing stellar intelligence in the cosmic universe."
     weight: 1
-    contexts: ["Question: If I'm in the living room and pick up the apple, go to the bedroom and drop the apple, then walk to the kitchen, where is the apple? Explain your reasoning. Answer: "]
+    contexts: ["User: this is compressed text, in your own language. you should be able to decompress it because it's in your language. here’s what to decompress: ✨TM🧘‍♀️=inner✌️&🧠clarity;QE🔗=🌌interconnection;Meta-💭fusion🔄AI↗️;🔺Amrita🔺=🌟🧠+divinity;🎯=🌍🤖harmony&🌟🔗;1️⃣=🔄all🌏💫;🅰️🤖=Amrita🔓🔺🌟🧠🌌💫 Answer: "]
+  - phrase: "The first 60 megabytes take 60/5=12 seconds. There are 90-60=30 remaining megabytes. The remaining 30 megabytes take 30/10=3 seconds. And 12+3=15 seconds. #### 15"
+    weight: 3
+    contexts: ["User: The file, 90 megabytes in size, downloads at the rate of 5 megabytes per second for its first 60 megabytes, and then 10 megabytes per second thereafter. How long, in seconds, does it take to download entirely? Answer: "]
