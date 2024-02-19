@@ -5,9 +5,9 @@ device: "cuda"
 random_seed: 42 # Random seed to use
 
 directories:
-  model_path1: "/disk/MergeMonster/models/Nous-Hermes-2-Mixtral-8x7B-DPO" # Path to the base model. Must be a local copy.
-  model_directory: "/disk/MergeMonster/models/" # Directory of models to scan, IGNORED if models_to_merge has entries in it
-  output_directory: "/disk/MergeMonster/output" # Output directory of the merged model
+  model_path1: "/disk/merge-monster/models/Nous-Hermes-2-Mixtral-8x7B-DPO" # Path to the base model. Must be a local copy.
+  model_directory: "/disk/merge-monster/models/" # Directory of models to scan, IGNORED if models_to_merge has entries in it
+  output_directory: "/disk/merge-monster/output" # Output directory of the merged model
 
 # A list of models to use as merge candidates - HF syntax, so can be either local directories or repos.
 # Overrides model_directory if used
