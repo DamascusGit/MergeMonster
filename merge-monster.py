@@ -27,8 +27,12 @@ def merge_monster(config_path):
     
     config = load_config(config_path)
 
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
     if 'device' in config: device = config['device']
     else: device = ['cpu']
+
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     model_path1 = config['directories']['model_path1']
     output_directory = config['directories']['output_directory']
