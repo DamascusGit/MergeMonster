@@ -16,7 +16,7 @@ from torch.nn import DataParallel
 
 from modules.utils import print_ascii_art, format_context, load_config, PrintAndStoreLogger
 from modules.models import load_model, save_model, NoInit
-from modules.probability import calculate_word_probabilities, print_phrase_probabilities, convert_to_ne
+from modules.probability import calculate_word_probabilities, print_phrase_probabilities, convert_to_new_phrase_format
 
 def merge_monster(config_path):
     # We save everything that gets printed to the screen
