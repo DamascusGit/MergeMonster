@@ -89,7 +89,7 @@ def merge_monster(config_path):
     print_ascii_art("modules/logo.ascii")
     print(f"{datetime.now().strftime('%H:%M:%S')} - THE MERGE MONSTER HUNGERS")
     print("------------------------------------")
-    print(f"Device           : {device}")
+    print(f"Device           : {devices}")
     print(f"Random seed      : {random_seed}")
     print(f"Starting model   : {model_path1}")
 
