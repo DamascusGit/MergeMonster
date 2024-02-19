@@ -411,7 +411,7 @@ def merge_monster(config_path):
 
 def main():
     parser = argparse.ArgumentParser(description="Gryphe's Mythical Merge Monster")
-    parser.add_argument('--config', type=str, required=True default='default.yaml', help='Path to the config YAML file')
+    parser.add_argument('--config', type=str, required=True, default='default.yaml', help='Path to the config YAML file')
     args = parser.parse_args()
 
     merge_monster(args.config)
